@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Share Page</title>
+
+    <!-- Bootstrap CSS for styling -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome Icons for the buttons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Set width and height for the extension popup -->
+    <style>
+      body {
+        width: 400px;  /* Set your desired width */
+        height: 350px; /* Set your desired height */
+      }
+    </style>
+  </head>
+
+  <body class="p-3">
+    <div class="text-center">
+      <h4>Share This Page</h4>
+      <div id="buttons">
+        <!-- Gmail button -->
+        <button id="gmailButton" class="btn btn-primary btn-block mb-2">
+          <i class="fas fa-envelope"></i> Share via Gmail
+        </button>
+        <!-- WhatsApp button -->
+        <button id="whatsappButton" class="btn btn-success btn-block">
+          <i class="fab fa-whatsapp"></i> Share via WhatsApp
+        </button>
+      </div>
+
+      <!-- Gmail predefined contacts -->
+      <div class="mt-3">
+        <h5>Send to Specific Contacts:</h5>
+        <ul class="list-group mb-2">
+          <!-- Example predefined contacts -->
+          <li class="list-group-item">
+            <button class="btn btn-link email-contact" data-email="example1@gmail.com">
+              Send to example1@gmail.com
+            </button>
+          </li>
+          <li class="list-group-item">
+            <button class="btn btn-link email-contact" data-email="example2@gmail.com">
+              Send to example2@gmail.com
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- JavaScript file to handle URL sharing -->
+    <script src="popup.js"></script>
+  </body>
+</html>
